@@ -5,7 +5,7 @@ on:
 
 jobs:
   deploy:
-    uses: k-candidate/gha-workflows/.github/workflows/deployment-pipeline.yaml@test-path
+    uses: k-candidate/gha-workflows/.github/workflows/deployment-pipeline.yaml@main
     with:
       region: "us-central1"      
       terraform_directory: "tfinfra"

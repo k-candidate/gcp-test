@@ -1,0 +1,14 @@
+name: Deploy Terraform to GCP
+
+on:
+  workflow_dispatch:
+
+jobs:
+  deploy:
+    uses: k-candidate/gha-workflows/.github/workflows/deployment-pipeline.yaml@main
+    with:
+      region: "us-central1"      
+      terraform_directory: "."
+      project_id: 'qwiklabs-gcp-02-3070118dcea4'
+    secrets:
+      service_account_key: ${{ secrets.GCP_SA_KEY }}
